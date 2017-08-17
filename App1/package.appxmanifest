@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="336f1b6b-a6e1-489e-a265-e73a626b56ce" Version="1.0.0.0" Publisher="CN=JaneC" />
+  <mp:PhoneIdentity PhoneProductId="336f1b6b-a6e1-489e-a265-e73a626b56ce" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>少城时代</DisplayName>
+    <PublisherDisplayName>JaneC</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="http://www.showcitytimes.net/">
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="http://www.showcitytimes.net/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="http://*.showcitytimes.net/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://weidian.com/?userid=326410152" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="http://jane.social/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="http://*.jane.social/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://jane.social/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://*.weidian.com/?userid=326410152" Type="include" WindowsRuntimeAccess="all" />
+      </uap:ApplicationContentUriRules>
+      <uap:VisualElements DisplayName="少城时代" Description="少城时代" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:LockScreen Notification="badge" BadgeLogo="images\BadgeLogo.png" />
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square310x310Logo="images\LargeTile.png" Square71x71Logo="images\SmallTile.png" ShortName="少城时代">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="images\splashscreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="allJoyn" />
+  </Capabilities>
+</Package>
